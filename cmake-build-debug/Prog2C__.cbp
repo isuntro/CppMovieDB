@@ -1,0 +1,122 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CodeBlocks_project_file>
+	<FileVersion major="1" minor="6"/>
+	<Project>
+		<Option title="Prog2C__"/>
+		<Option makefile_is_custom="1"/>
+		<Option compiler="gcc"/>
+		<Option virtualFolders="CMake Files\;"/>
+		<Build>
+			<Target title="all">
+				<Option working_dir="/Users/tiberiusimionvoicu/Desktop/Prog2C++/cmake-build-debug"/>
+				<Option type="4"/>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j4 -f &quot;/Users/tiberiusimionvoicu/Desktop/Prog2C++/cmake-build-debug/Makefile&quot;  VERBOSE=1 all"/>
+					<CompileFile command="/usr/bin/make -j4 -f &quot;/Users/tiberiusimionvoicu/Desktop/Prog2C++/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j4 -f &quot;/Users/tiberiusimionvoicu/Desktop/Prog2C++/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j4 -f &quot;/Users/tiberiusimionvoicu/Desktop/Prog2C++/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="edit_cache">
+				<Option working_dir="/Users/tiberiusimionvoicu/Desktop/Prog2C++/cmake-build-debug"/>
+				<Option type="4"/>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j4 -f &quot;/Users/tiberiusimionvoicu/Desktop/Prog2C++/cmake-build-debug/Makefile&quot;  VERBOSE=1 edit_cache"/>
+					<CompileFile command="/usr/bin/make -j4 -f &quot;/Users/tiberiusimionvoicu/Desktop/Prog2C++/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j4 -f &quot;/Users/tiberiusimionvoicu/Desktop/Prog2C++/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j4 -f &quot;/Users/tiberiusimionvoicu/Desktop/Prog2C++/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="rebuild_cache">
+				<Option working_dir="/Users/tiberiusimionvoicu/Desktop/Prog2C++/cmake-build-debug"/>
+				<Option type="4"/>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j4 -f &quot;/Users/tiberiusimionvoicu/Desktop/Prog2C++/cmake-build-debug/Makefile&quot;  VERBOSE=1 rebuild_cache"/>
+					<CompileFile command="/usr/bin/make -j4 -f &quot;/Users/tiberiusimionvoicu/Desktop/Prog2C++/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j4 -f &quot;/Users/tiberiusimionvoicu/Desktop/Prog2C++/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j4 -f &quot;/Users/tiberiusimionvoicu/Desktop/Prog2C++/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="Prog2C__">
+				<Option output="/Users/tiberiusimionvoicu/Desktop/Prog2C++/cmake-build-debug/Prog2C__" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/Users/tiberiusimionvoicu/Desktop/Prog2C++/cmake-build-debug"/>
+				<Option object_output="./"/>
+				<Option type="1"/>
+				<Option compiler="gcc"/>
+				<Compiler>
+					<Add directory="/usr/local/include"/>
+					<Add directory="/Library/Developer/CommandLineTools/usr/bin/../lib/clang/8.1.0/include"/>
+					<Add directory="/Library/Developer/CommandLineTools/usr/include"/>
+					<Add directory="/usr/include"/>
+					<Add directory="/System/Library/Frameworks"/>
+					<Add directory="/Library/Frameworks"/>
+					<Add directory="/Library/Developer/CommandLineTools/usr/bin/../include/c++/v1"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j4 -f &quot;/Users/tiberiusimionvoicu/Desktop/Prog2C++/cmake-build-debug/Makefile&quot;  VERBOSE=1 Prog2C__"/>
+					<CompileFile command="/usr/bin/make -j4 -f &quot;/Users/tiberiusimionvoicu/Desktop/Prog2C++/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j4 -f &quot;/Users/tiberiusimionvoicu/Desktop/Prog2C++/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j4 -f &quot;/Users/tiberiusimionvoicu/Desktop/Prog2C++/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="Prog2C__/fast">
+				<Option output="/Users/tiberiusimionvoicu/Desktop/Prog2C++/cmake-build-debug/Prog2C__" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/Users/tiberiusimionvoicu/Desktop/Prog2C++/cmake-build-debug"/>
+				<Option object_output="./"/>
+				<Option type="1"/>
+				<Option compiler="gcc"/>
+				<Compiler>
+					<Add directory="/usr/local/include"/>
+					<Add directory="/Library/Developer/CommandLineTools/usr/bin/../lib/clang/8.1.0/include"/>
+					<Add directory="/Library/Developer/CommandLineTools/usr/include"/>
+					<Add directory="/usr/include"/>
+					<Add directory="/System/Library/Frameworks"/>
+					<Add directory="/Library/Frameworks"/>
+					<Add directory="/Library/Developer/CommandLineTools/usr/bin/../include/c++/v1"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j4 -f &quot;/Users/tiberiusimionvoicu/Desktop/Prog2C++/cmake-build-debug/Makefile&quot;  VERBOSE=1 Prog2C__/fast"/>
+					<CompileFile command="/usr/bin/make -j4 -f &quot;/Users/tiberiusimionvoicu/Desktop/Prog2C++/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j4 -f &quot;/Users/tiberiusimionvoicu/Desktop/Prog2C++/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j4 -f &quot;/Users/tiberiusimionvoicu/Desktop/Prog2C++/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+		</Build>
+		<Unit filename="/Users/tiberiusimionvoicu/Desktop/Prog2C++/Movie.cpp">
+			<Option target="Prog2C__"/>
+		</Unit>
+		<Unit filename="/Users/tiberiusimionvoicu/Desktop/Prog2C++/Movie.h">
+			<Option target="Prog2C__"/>
+		</Unit>
+		<Unit filename="/Users/tiberiusimionvoicu/Desktop/Prog2C++/MovieDB.cpp">
+			<Option target="Prog2C__"/>
+		</Unit>
+		<Unit filename="/Users/tiberiusimionvoicu/Desktop/Prog2C++/MovieDB.h">
+			<Option target="Prog2C__"/>
+		</Unit>
+		<Unit filename="/Users/tiberiusimionvoicu/Desktop/Prog2C++/Rating.cpp">
+			<Option target="Prog2C__"/>
+		</Unit>
+		<Unit filename="/Users/tiberiusimionvoicu/Desktop/Prog2C++/Rating.h">
+			<Option target="Prog2C__"/>
+		</Unit>
+		<Unit filename="/Users/tiberiusimionvoicu/Desktop/Prog2C++/Ratings.cpp">
+			<Option target="Prog2C__"/>
+		</Unit>
+		<Unit filename="/Users/tiberiusimionvoicu/Desktop/Prog2C++/Ratings.h">
+			<Option target="Prog2C__"/>
+		</Unit>
+		<Unit filename="/Users/tiberiusimionvoicu/Desktop/Prog2C++/TimeCode.cpp">
+			<Option target="Prog2C__"/>
+		</Unit>
+		<Unit filename="/Users/tiberiusimionvoicu/Desktop/Prog2C++/TimeCode.h">
+			<Option target="Prog2C__"/>
+		</Unit>
+		<Unit filename="/Users/tiberiusimionvoicu/Desktop/Prog2C++/main.cpp">
+			<Option target="Prog2C__"/>
+		</Unit>
+		<Unit filename="/Users/tiberiusimionvoicu/Desktop/Prog2C++/CMakeLists.txt">
+			<Option virtualFolder="CMake Files\"/>
+		</Unit>
+	</Project>
+</CodeBlocks_project_file>

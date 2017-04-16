@@ -15,32 +15,29 @@ Ratings::~Ratings(){
 		delete(this->ratingsList[i]);
 	}
 }
-Ratings& Ratings::operator= (const Ratings &list){
-	if (this != &list) {
-		for(int i=0; i < this->size(); i++){
-			delete(this->ratingsList[i]);
-		}
-		for(int i=0; i < list.size(); i++) {
-			this->ratingsList.push_back(list.getRatings()[i]);
-		}
-	}
+void swap(Ratings &one, Ratings &another){
+	using std::swap;
+	swap(one.ratingsList, another.ratingsList);
+}
+Ratings& Ratings::operator= ( Ratings that){
+	swap(*this,that);
 	return *this;
 }
 std::istream &operator>> (std::istream &in, Ratings &rList) {
 	string line,author,title,temp;
 	int rating;
-	string day,month,year,hour,minute,second;
+	string days,months,years,hours,minutes,seconds;
 	while(getline(in,line)) {
 		stringstream sstr(line);
-		getline(sstr,day,'/');
-		getline(sstr,month,'/');
-		getline(sstr,year,'T');
-		getline(sstr,hour,':');
-		getline(sstr,minute,':');
-		getline(sstr,second,'Z');
+		getline(sstr,days,'/');
+		getline(sstr,months,'/');
+		getline(sstr,years,'T');
+		getline(sstr,hours,':');
+		getline(sstr,minutes,':');
+		getline(sstr,seconds,'Z');
 
-		TimeCode *date = new TimeCode(stoi(day),stoi(month),stoi(year),
-		stoi(hour),stoi(minute),stoi(second));
+		TimeCode date =  TimeCode(stoi(days),stoi(months),stoi(years),
+		stoi(hours),stoi(minutes),stoi(seconds));
 		//in >> *tDate;
 		sstr.ignore(2);
 		getline(sstr,author,'\"');
@@ -49,7 +46,7 @@ std::istream &operator>> (std::istream &in, Ratings &rList) {
 		sstr.ignore(1);
 		sstr >> rating;
 		Rating *aRating = new Rating(date, author, title, rating);
-		rList.addRating(*aRating);
+		rList.addRating(aRating);
 	}
 	return in;
 }

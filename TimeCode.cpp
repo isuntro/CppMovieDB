@@ -1,20 +1,52 @@
 #include "TimeCode.h"
-#include <string>
+
 using namespace std;
+TimeCode::~TimeCode(){
+
+};
+TimeCode::TimeCode(const TimeCode &that) {
+	this->days = that.days;
+	this->months = that.months;
+	this->years = that.years;
+	this->hours = that.hours;
+	this->minutes = that.minutes;
+	this->seconds = that.seconds;
+}
+void swap(TimeCode &one, TimeCode &another) {
+	using std::swap;
+
+	swap(one.days,another.days);
+	swap(one.months,another.months);
+	swap(one.years, another.years);
+	swap(one.hours, another.hours);
+	swap(one.minutes, another.minutes);
+	swap(one.seconds, another.seconds);
+}
+TimeCode& TimeCode::operator=(const TimeCode &that) {
+	if (this != &that){
+		this->days = that.days;
+		this->months = that.months;
+		this->years = that.years;
+		this->hours = that.hours;
+		this->minutes = that.minutes;
+		this->seconds = that.seconds;
+	}
+	return *this;
+}
 
 TimeCode::TimeCode(int days, int months, int years,
-	long int hours, long int minutes, long int seconds) {
+	int hours, long int minutes, long long int seconds) {
 	seconds = seconds + 60 *(minutes + 60 *(hours + 24 * (days + 31 *( months + (12 * years)))));
 	minutes = seconds / 60;
 	hours = minutes / 60;
 	days = hours / 24;
 	months = days / 31;
-	this->day = (days % 31);
-	this->month = (months % 12);
-	this->year = months / 12;
-	this->hour = hours % 24 ;
-	this->minute = minutes % 60;
-	this->second = seconds % 60;
+	this->days = (days % 31);
+	this->months = (months % 12);
+	this->years = months / 12;
+	this->hours = hours % 24 ;
+	this->minutes = minutes % 60;
+	this->seconds = seconds % 60;
 }
 std::istream& operator>> (std::istream &in, TimeCode &aTime) {
 	char c;

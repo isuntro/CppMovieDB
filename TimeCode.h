@@ -8,43 +8,46 @@
 
 class TimeCode {
 private:
-	int day,month,year;
-	long int hour,minute,second;
+	int days,months,years,hours,minutes,seconds;
 public:
-	TimeCode(int day = 1, int month = 1, int year = 1
-		, long int hour = 0, long int minute = 0, long int second = 0);
+	TimeCode(int days = 1, int months = 1, int years = 1
+		, int hours = 0,long int minutes = 0,long long int seconds = 0);
 	TimeCode(int date);
-	inline int getDay() const;
-	inline int getMonth() const;
-	inline int getYear() const;
-	inline long int getHour() const;
-	inline long int getMinute() const;
-	inline long int getSecond() const;
+	~TimeCode();
+	TimeCode(const TimeCode &acode);
+	inline int getDays() const;
+	inline int getMonths() const;
+	inline int getYears() const;
+	inline int getHours() const;
+	inline int getMinutes() const;
+	inline int getSeconds() const;
 	inline operator int() const;
 	friend std::ostream& operator<< (std::ostream &out, const TimeCode &atime);
+	TimeCode& operator=(const TimeCode &acode);
+	friend void swap(TimeCode &one, TimeCode &another);
 
 };
-inline int TimeCode::getDay() const {
-	return day;
+inline int TimeCode::getDays() const {
+	return days;
 }
-inline int TimeCode::getMonth() const {
-	return month;
+inline int TimeCode::getMonths() const {
+	return months;
 }
-inline int TimeCode::getYear() const {
-	return year;
+inline int TimeCode::getYears() const {
+	return years;
 }
-inline long int TimeCode::getHour() const {
-	return hour;
+inline int TimeCode::getHours() const {
+	return hours;
 }
-inline long int TimeCode::getMinute() const {
-	return minute;
+inline int TimeCode::getMinutes() const {
+	return minutes;
 }
-inline long int TimeCode::getSecond() const {
-	return second;
+inline int TimeCode::getSeconds() const {
+	return seconds;
 }
 inline TimeCode::operator int() const {
-	long long int intrep = second + 60 *(minute + 60 *(hour + 24 *
-		(day + 31 *( month + (12 * year)))));
+	long long int intrep = seconds + 60 *(minutes + 60 *(hours + 24 *
+		(days + 31 *( months + (12 * years)))));
 	return intrep;
 }
 inline bool operator <(const TimeCode &lhs, const TimeCode &rhs) {
@@ -85,9 +88,9 @@ inline int operator% (const TimeCode &lhs, int t) {
 }
 
 inline std::ostream& operator<< (std::ostream &out, const TimeCode &aTime) {
-	out << aTime.getDay() << '/' << aTime.getMonth() << '/' << aTime.getYear() <<
-	'T' << aTime.getHour() << ':' << aTime.getMinute() << ":" <<
-	aTime.getSecond() << "Z" << std::endl;
+	out << aTime.getDays() << '/' << aTime.getMonths() << '/' << aTime.getYears() <<
+	'T' << aTime.getHours() << ':' << aTime.getMinutes() << ":" <<
+	aTime.getSeconds() << "Z";
 	return out;
 }
 std::istream& operator>> (std::istream &in, TimeCode &atime);

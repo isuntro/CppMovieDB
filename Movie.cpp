@@ -1,6 +1,5 @@
 // Created by Tiberiu Simion Voicu on 22/03/2017.
 #include "Movie.h"
-using namespace std;
 
 Movie::Movie(string title, int year, string rated, string genre,
 	 		int length, float mean, int ratings){
@@ -9,8 +8,33 @@ Movie::Movie(string title, int year, string rated, string genre,
 	this->rated = rated;
     this->genre = genre;
     this->length = length;
-    this->mean = mean;
+    this->meanRating = mean;
 	this->ratings = ratings;
+}
+Movie::~Movie(){ };
+Movie::Movie(const Movie &that){
+	this->title = that.title;
+	this->year = that.year;
+	this->rated = that.rated;
+    this->genre = that.genre;
+    this->length = that.length;
+    this->meanRating = that.meanRating;
+	this->ratings = that.ratings;
+}
+void swap(Movie &one, Movie &another){
+	using std::swap;
+
+	swap (one.title, another.title);
+	swap (one.year, another.year);
+	swap (one.rated, another.rated);
+	swap (one.genre, another.genre);
+	swap (one.length, another.length);
+	swap (one.meanRating, another.meanRating);
+	swap (one.ratings, another.ratings);
+}
+Movie& Movie::operator =(Movie that){
+	swap(*this,that);
+	return *this;
 }
 /* ***********************************
 				REDO
